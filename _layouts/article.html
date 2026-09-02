@@ -11,6 +11,13 @@ layout: default
     <h1 class="serif">{{ page.title }}</h1>
     <div class="article-meta">{{ page.date | date: "%d %B %Y" }} &nbsp;&middot;&nbsp; {{ read_min }} min read &nbsp;&middot;&nbsp; Sourced beyond the usual wellness sites</div>
 
+    {% if page.image %}
+    <figure class="article-hero">
+      <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title }}">
+      {% if page.image_credit %}<figcaption>{{ page.image_credit }}</figcaption>{% endif %}
+    </figure>
+    {% endif %}
+
     <div class="article-body">
       {{ content }}
     </div>

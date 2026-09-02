@@ -3,8 +3,12 @@
 {% assign read_min = words | divided_by: 200 %}
 {% if read_min < 1 %}{% assign read_min = 1 %}{% endif %}
 <a class="article-card" href="{{ article.url | relative_url }}">
-  <div class="thumb">
+  <div class="thumb{% if article.image %} has-photo{% endif %}">
+    {% if article.image %}
+    <img class="photo" src="{{ article.image | relative_url }}" alt="{{ article.image_alt | default: article.title }}">
+    {% else %}
     <img src="{{ '/assets/img/logo-white.png' | relative_url }}" alt="">
+    {% endif %}
     {% if include.is_new %}<div class="badge-new">NEW</div>{% endif %}
   </div>
   <div class="cat">{{ article.category }}</div>
