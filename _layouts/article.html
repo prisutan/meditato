@@ -1,0 +1,37 @@
+---
+layout: default
+---
+{% assign words = page.content | number_of_words %}
+{% assign read_min = words | divided_by: 200 %}
+{% if read_min < 1 %}{% assign read_min = 1 %}{% endif %}
+<div class="article-wrap">
+  <div class="article-inner">
+    <div class="breadcrumb"><a href="{{ '/' | relative_url }}">Home</a> / <a href="{{ '/articles/' | relative_url }}">Articles</a> / <span class="current">{{ page.category }}</span></div>
+    <div class="article-cat">{{ page.category }}</div>
+    <h1 class="serif">{{ page.title }}</h1>
+    <div class="article-meta">{{ page.date | date: "%d %B %Y" }} &nbsp;&middot;&nbsp; {{ read_min }} min read &nbsp;&middot;&nbsp; Sourced beyond the usual wellness sites</div>
+
+    <div class="article-body">
+      {{ content }}
+    </div>
+
+    <div class="inline-banner">
+      <div class="ad-label">Advertisement</div>
+      <div class="ad-copy">Sponsor this space — reach a calm, engaged audience.</div>
+      <div class="ad-cta">Get in touch &rarr;</div>
+    </div>
+
+    {% if page.sources %}
+    <div class="sources-block">
+      <div class="sources-label">Sources</div>
+      <div class="sources-list">
+        <ul>
+          {% for source in page.sources %}
+          <li>{{ source }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</div>

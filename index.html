@@ -1,0 +1,34 @@
+---
+layout: default
+title: Meditation, explained calmly.
+---
+{% assign sorted = site.articles | sort: 'date' | reverse %}
+
+<div class="hero">
+  <h1>Meditation, explained calmly.</h1>
+  <div class="hero-sub">New research, traditions and techniques from around the world — reviewed and added every week.</div>
+  <div class="pill-row">
+    {% for cat in site.categories_nav %}
+    <div class="pill">{{ cat }}</div>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="ad-banner-wrap">
+  <div class="ad-banner">
+    <div class="ad-label">Advertisement</div>
+    <div class="ad-copy">Sponsor this space — reach a calm, engaged audience.</div>
+    <div class="ad-cta">Get in touch &rarr;</div>
+  </div>
+</div>
+
+<div class="section-head">
+  <h2>New this week</h2>
+  <div class="note">Newest first &middot; updated weekly</div>
+</div>
+
+<div class="article-grid">
+  {% for article in sorted limit: 12 %}
+  {% include article-card.html article=article is_new=forloop.first %}
+  {% endfor %}
+</div>

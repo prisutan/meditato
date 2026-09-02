@@ -1,0 +1,47 @@
+title: Meditato
+description: "New research, traditions and techniques from around the world — reviewed and added every week."
+url: "https://meditato.rs"
+baseurl: ""
+
+markdown: kramdown
+kramdown:
+  input: GFM
+
+collections:
+  articles:
+    output: true
+    permalink: /articles/:path/
+
+defaults:
+  - scope:
+      path: "_articles"
+      type: "articles"
+    values:
+      layout: "article"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+categories_nav:
+  - Breath
+  - Mindfulness
+  - Sleep
+  - Anxiety
+  - Traditions
+  - Beginners
+
+exclude:
+  - content
+  - design
+  - "Meditato Logo files"
+  - PROJECT_NOTES.md
+  - CONTENT_LOG.md
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap

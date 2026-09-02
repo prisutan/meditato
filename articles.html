@@ -1,0 +1,17 @@
+---
+layout: default
+title: Articles
+permalink: /articles/
+---
+{% assign sorted = site.articles | sort: 'date' | reverse %}
+
+<div class="section-head">
+  <h2>All articles</h2>
+  <div class="note">{{ sorted | size }} published &middot; newest first</div>
+</div>
+
+<div class="article-grid">
+  {% for article in sorted %}
+  {% include article-card.html article=article %}
+  {% endfor %}
+</div>

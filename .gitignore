@@ -1,0 +1,9 @@
+PROJECT_NOTES.md
+CONTENT_LOG.md
+content/
+design/
+Meditato Logo files/
+_site/
+.jekyll-cache/
+.bundle/
+vendor/

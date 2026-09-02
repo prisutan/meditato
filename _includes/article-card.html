@@ -1,0 +1,14 @@
+{% assign article = include.article %}
+{% assign words = article.content | number_of_words %}
+{% assign read_min = words | divided_by: 200 %}
+{% if read_min < 1 %}{% assign read_min = 1 %}{% endif %}
+<a class="article-card" href="{{ article.url | relative_url }}">
+  <div class="thumb">
+    <img src="{{ '/assets/img/logo-white.png' | relative_url }}" alt="">
+    {% if include.is_new %}<div class="badge-new">NEW</div>{% endif %}
+  </div>
+  <div class="cat">{{ article.category }}</div>
+  <div class="title serif">{{ article.title }}</div>
+  <div class="meta">{{ article.date | date: "%d %b %Y" }} &middot; {{ read_min }} min read</div>
+  <div class="excerpt">{{ article.excerpt | strip_html | truncate: 130 }}</div>
+</a>

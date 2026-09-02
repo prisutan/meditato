@@ -1,0 +1,19 @@
+<div class="site-footer">
+  <img src="{{ '/assets/img/logo-white.png' | relative_url }}" alt="Meditato">
+  <div class="footer-col">
+    <div class="heading">Explore</div>
+    <a href="{{ '/' | relative_url }}">Home</a>
+    <a href="{{ '/articles/' | relative_url }}">Articles</a>
+    <a href="{{ '/about/' | relative_url }}">About</a>
+  </div>
+  <div class="footer-col">
+    <div class="heading">Categories</div>
+    <a href="{{ '/articles/' | relative_url }}">Breath</a>
+    <a href="{{ '/articles/' | relative_url }}">Traditions</a>
+    <a href="{{ '/articles/' | relative_url }}">Sleep</a>
+  </div>
+  <div class="footer-col align-right">
+    <span>&copy; {{ 'now' | date: '%Y' }} Meditato</span>
+    <span>meditato.rs</span>
+  </div>
+</div>
