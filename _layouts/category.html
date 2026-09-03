@@ -1,15 +1,17 @@
 ---
 layout: default
 ---
-{% assign matched = site.articles | where: "category", page.category_filter | sort: 'date' | reverse %}
+{% assign lang = page.language | default: 'en' %}
+{% assign t = site.data.i18n[lang] %}
+{% assign matched = site.articles | where: "language", lang | where: "category", page.category_filter | sort: 'date' | reverse %}
 
 <div class="section-head">
   <h2>{{ page.title }}</h2>
-  <div class="note">{{ matched | size }} article{% unless matched.size == 1 %}s{% endunless %}</div>
+  <div class="note">{% include article-count.html count=matched.size t=t %}</div>
 </div>
 
 <div class="article-grid">
   {% for article in matched %}
-  {% include article-card.html article=article %}
+  {% include article-card.html article=article t=t %}
   {% endfor %}
 </div>

@@ -1,15 +1,21 @@
 ---
 layout: default
 ---
+{% assign lang = page.language | default: 'en' %}
+{% assign t = site.data.i18n[lang] %}
+{% assign cat = t.categories[page.category] %}
+{% comment %}Fallback if a new category is added to an article before _data/i18n.yml.{% endcomment %}
+{% assign cat_label = cat.label | default: page.category %}
+{% if cat.url %}{% assign cat_url = cat.url %}{% else %}{% assign cat_url = page.category | downcase | prepend: '/' | append: '/' %}{% endif %}
 {% assign words = page.content | number_of_words %}
 {% assign read_min = words | divided_by: 200 %}
 {% if read_min < 1 %}{% assign read_min = 1 %}{% endif %}
 <div class="article-wrap">
   <div class="article-inner">
-    <div class="breadcrumb"><a href="{{ '/' | relative_url }}">Home</a> / <a href="{{ '/articles/' | relative_url }}">Articles</a> / <a class="current" href="{{ '/' | append: page.category | downcase | append: '/' | relative_url }}">{{ page.category }}</a></div>
-    <div class="article-cat">{{ page.category }}</div>
+    <div class="breadcrumb"><a href="{{ t.home_url | relative_url }}">{{ t.home }}</a> / <a href="{{ t.articles_url | relative_url }}">{{ t.articles }}</a> / <a class="current" href="{{ cat_url | relative_url }}">{{ cat_label }}</a></div>
+    <div class="article-cat">{{ cat_label }}</div>
     <h1 class="serif">{{ page.title }}</h1>
-    <div class="article-meta">{{ page.date | date: "%d %B %Y" }} &nbsp;&middot;&nbsp; {{ read_min }} min read &nbsp;&middot;&nbsp; Sourced beyond the usual wellness sites</div>
+    <div class="article-meta">{% include fmt-date.html date=page.date t=t %} &nbsp;&middot;&nbsp; {{ read_min }} {{ t.min_read }} &nbsp;&middot;&nbsp; {{ t.sourced_note }}</div>
 
     {% if page.image %}
     <figure class="article-hero">
@@ -26,7 +32,7 @@ layout: default
 
     {% if page.sources %}
     <div class="sources-block">
-      <div class="sources-label">Sources</div>
+      <div class="sources-label">{{ t.sources }}</div>
       <div class="sources-list">
         <ul>
           {% for source in page.sources %}
@@ -43,13 +49,13 @@ layout: default
     </div>
     {% endif %}
 
-    {% assign related = site.articles | where: "category", page.category | where_exp: "a", "a.url != page.url" | sort: 'date' | reverse %}
+    {% assign related = site.articles | where: "language", lang | where: "category", page.category | where_exp: "a", "a.url != page.url" | sort: 'date' | reverse %}
     {% if related.size > 0 %}
     <div class="related-block">
-      <div class="sources-label">Related</div>
+      <div class="sources-label">{{ t.related }}</div>
       <div class="related-grid">
         {% for article in related limit: 3 %}
-        {% include article-card.html article=article %}
+        {% include article-card.html article=article t=t %}
         {% endfor %}
       </div>
     </div>

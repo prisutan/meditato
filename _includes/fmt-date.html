@@ -1,0 +1,19 @@
+{%- comment -%}
+Localized date. Params: date (required), t (i18n hash, required), short (bool).
+EN -> "03 September 2026" / "03 Sep 2026"
+SR -> "3. septembra 2026." / "3. sep 2026."
+Variables are fd_-prefixed: Liquid `assign` inside an include writes to the
+caller's scope, so unprefixed names here would clobber the caller's.
+{%- endcomment -%}
+{%- assign fd_mi = include.date | date: "%m" | minus: 1 -%}
+{%- if include.short -%}
+  {%- assign fd_month = include.t.months_short[fd_mi] -%}
+{%- else -%}
+  {%- assign fd_month = include.t.months[fd_mi] -%}
+{%- endif -%}
+{%- if include.t.date_style == "sr" -%}
+  {%- assign fd_day = include.date | date: "%d" | plus: 0 -%}
+  {{- fd_day }}. {{ fd_month }} {{ include.date | date: "%Y" }}.
+{%- else -%}
+  {{- include.date | date: "%d" }} {{ fd_month }} {{ include.date | date: "%Y" -}}
+{%- endif -%}

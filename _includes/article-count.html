@@ -1,0 +1,24 @@
+{%- comment -%}
+Pluralized article count, e.g. "12 articles" / "1 članak" / "3 članka".
+Params: count (required), t (i18n hash, required). Vars are ac_-prefixed
+because Liquid `assign` inside an include writes to the caller's scope.
+{%- endcomment -%}
+{%- assign ac_n = include.count | plus: 0 -%}
+{%- if include.t.date_style == "sr" -%}
+  {%- assign ac_h = ac_n | modulo: 100 -%}
+  {%- assign ac_d = ac_n | modulo: 10 -%}
+  {%- if ac_h >= 11 and ac_h <= 14 -%}
+    {%- assign ac_word = include.t.count_many -%}
+  {%- elsif ac_d == 1 -%}
+    {%- assign ac_word = include.t.count_one -%}
+  {%- elsif ac_d >= 2 and ac_d <= 4 -%}
+    {%- assign ac_word = include.t.count_few -%}
+  {%- else -%}
+    {%- assign ac_word = include.t.count_many -%}
+  {%- endif -%}
+{%- elsif ac_n == 1 -%}
+  {%- assign ac_word = include.t.count_one -%}
+{%- else -%}
+  {%- assign ac_word = include.t.count_few -%}
+{%- endif -%}
+{{ ac_n }} {{ ac_word }}

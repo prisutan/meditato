@@ -1,6 +1,8 @@
 ---
 title: About
 permalink: /about/
+language: en
+lang_alt_url: /sr/o-nama/
 ---
 
 Meditato is a weekly-updated library of articles about meditation — traditions from around the world, breathing techniques, sleep practices, and the current research behind all of it.

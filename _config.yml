@@ -18,6 +18,19 @@ defaults:
       type: "articles"
     values:
       layout: "article"
+  # Language is derived from the folder, so an article can never end up
+  # untagged and leak into the wrong language's listings. Front matter still
+  # wins if it sets `language:` explicitly.
+  - scope:
+      path: "_articles/en"
+      type: "articles"
+    values:
+      language: "en"
+  - scope:
+      path: "_articles/sr"
+      type: "articles"
+    values:
+      language: "sr"
   - scope:
       path: ""
       type: "pages"

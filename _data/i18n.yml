@@ -1,0 +1,171 @@
+# Site chrome strings, per language.
+# Every visitor-facing label outside article body text lives here — nothing
+# hard-coded in a layout or include. To add a language: add a top-level key
+# with the same shape, add `_articles/<code>/`, and a `_config.yml` defaults
+# scope setting `language: <code>` for that folder.
+#
+# Category keys must match the `category:` value in article front matter
+# (always English — the label is what gets translated, not the data).
+
+en:
+  code: "en"
+  locale: "en_US"
+  site_description: "New research, traditions and techniques from around the world — reviewed and added every week."
+  # navigation / URLs
+  home_url: "/"
+  articles_url: "/articles/"
+  about_url: "/about/"
+  share_url: "/share/"
+  contact_url: "/contact/"
+  # nav labels
+  home: "Home"
+  articles: "Articles"
+  about: "About"
+  share: "Share a Story"
+  contact: "Contact"
+  # homepage
+  hero_title: "Meditation, explained calmly."
+  hero_sub: "New research, traditions and techniques from around the world — reviewed and added every week."
+  new_this_week: "New this week"
+  badge_new: "NEW"
+  # listings
+  all_articles: "All articles"
+  published: "published"
+  newest_first: "newest first"
+  count_one: "article"
+  count_few: "articles"
+  count_many: "articles"
+  # article page
+  min_read: "min read"
+  sourced_note: "Sourced beyond the usual wellness sites"
+  sources: "Sources"
+  related: "Related"
+  # footer
+  explore: "Explore"
+  categories_heading: "Categories"
+  support_us: "Support us"
+  # date rendering
+  date_style: "en"
+  months:
+    - "January"
+    - "February"
+    - "March"
+    - "April"
+    - "May"
+    - "June"
+    - "July"
+    - "August"
+    - "September"
+    - "October"
+    - "November"
+    - "December"
+  months_short:
+    - "Jan"
+    - "Feb"
+    - "Mar"
+    - "Apr"
+    - "May"
+    - "Jun"
+    - "Jul"
+    - "Aug"
+    - "Sep"
+    - "Oct"
+    - "Nov"
+    - "Dec"
+  categories:
+    Breath:
+      label: "Breath"
+      url: "/breath/"
+    Mindfulness:
+      label: "Mindfulness"
+      url: "/mindfulness/"
+    Sleep:
+      label: "Sleep"
+      url: "/sleep/"
+    Anxiety:
+      label: "Anxiety"
+      url: "/anxiety/"
+    Traditions:
+      label: "Traditions"
+      url: "/traditions/"
+    Beginners:
+      label: "Beginners"
+      url: "/beginners/"
+
+sr:
+  code: "sr"
+  locale: "sr_RS"
+  site_description: "Nova istraživanja, tradicije i tehnike iz celog sveta — pregledano i dopunjeno svake nedelje."
+  home_url: "/sr/"
+  articles_url: "/sr/clanci/"
+  about_url: "/sr/o-nama/"
+  share_url: "/sr/podeli-pricu/"
+  contact_url: "/sr/kontakt/"
+  home: "Početna"
+  articles: "Članci"
+  about: "O nama"
+  share: "Podeli priču"
+  contact: "Kontakt"
+  hero_title: "Meditacija, objašnjena smireno."
+  hero_sub: "Nova istraživanja, tradicije i tehnike iz celog sveta — pregledano i dopunjeno svake nedelje."
+  new_this_week: "Novo ove nedelje"
+  badge_new: "NOVO"
+  all_articles: "Svi članci"
+  published: "objavljeno"
+  newest_first: "najnovije prvo"
+  count_one: "članak"
+  count_few: "članka"
+  count_many: "članaka"
+  min_read: "min čitanja"
+  sourced_note: "Izvori van uobičajenih wellness sajtova"
+  sources: "Izvori"
+  related: "Povezani tekstovi"
+  explore: "Istraži"
+  categories_heading: "Kategorije"
+  support_us: "Podržite nas"
+  date_style: "sr"
+  months:
+    - "januara"
+    - "februara"
+    - "marta"
+    - "aprila"
+    - "maja"
+    - "juna"
+    - "jula"
+    - "avgusta"
+    - "septembra"
+    - "oktobra"
+    - "novembra"
+    - "decembra"
+  months_short:
+    - "jan"
+    - "feb"
+    - "mar"
+    - "apr"
+    - "maj"
+    - "jun"
+    - "jul"
+    - "avg"
+    - "sep"
+    - "okt"
+    - "nov"
+    - "dec"
+  categories:
+    Breath:
+      label: "Disanje"
+      url: "/sr/disanje/"
+    Mindfulness:
+      label: "Svesnost"
+      url: "/sr/svesnost/"
+    Sleep:
+      label: "San"
+      url: "/sr/san/"
+    Anxiety:
+      label: "Anksioznost"
+      url: "/sr/anksioznost/"
+    Traditions:
+      label: "Tradicije"
+      url: "/sr/tradicije/"
+    Beginners:
+      label: "Za početnike"
+      url: "/sr/pocetnici/"

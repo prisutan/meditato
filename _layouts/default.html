@@ -1,16 +1,24 @@
+{%- assign doc_lang = page.language | default: 'en' -%}
+{%- assign doc_t = site.data.i18n[doc_lang] -%}
+{%- assign doc_desc = page.excerpt | default: doc_t.site_description | default: site.description -%}
 <!doctype html>
-<html lang="en">
+<html lang="{{ doc_lang }}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% if page.title %}{{ page.title }} — {% endif %}Meditato</title>
-  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | truncate: 160 }}">
+  <meta name="description" content="{{ doc_desc | strip_html | truncate: 160 }}">
   <meta property="og:title" content="{{ page.title | default: site.title }}">
-  <meta property="og:description" content="{{ page.excerpt | default: site.description | strip_html | truncate: 160 }}">
+  <meta property="og:description" content="{{ doc_desc | strip_html | truncate: 160 }}">
   <meta property="og:type" content="{% if page.image %}article{% else %}website{% endif %}">
+  <meta property="og:locale" content="{{ doc_t.locale }}">
   <meta property="og:url" content="{{ page.url | absolute_url }}">
   {% if page.image %}<meta property="og:image" content="{{ page.image | absolute_url }}">{% endif %}
   <meta name="twitter:card" content="{% if page.image %}summary_large_image{% else %}summary{% endif %}">
+  {%- if page.lang_alt_url %}
+  <link rel="alternate" hreflang="{{ doc_lang }}" href="{{ page.url | absolute_url }}">
+  <link rel="alternate" hreflang="{% if doc_lang == 'sr' %}en{% else %}sr{% endif %}" href="{{ page.lang_alt_url | absolute_url }}">
+  {%- endif %}
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600&family=Karla:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">

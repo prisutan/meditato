@@ -1,17 +1,33 @@
+{%- comment -%}
+Language-aware header. `lang` comes from page front matter (folder-derived for
+articles, explicit for pages), defaulting to `en` — the historical default.
+The EN/SR toggle prefers a per-page `lang_alt_url` (an exact counterpart page
+or article translation) and otherwise falls back to the other language's home,
+so it is always a real link, never an inert `#`.
+{%- endcomment -%}
+{%- assign h_lang = page.language | default: 'en' -%}
+{%- assign h_t = site.data.i18n[h_lang] -%}
+{%- if h_lang == 'sr' -%}
+  {%- assign h_alt = page.lang_alt_url | default: site.data.i18n.en.home_url -%}
+{%- else -%}
+  {%- assign h_alt = page.lang_alt_url | default: site.data.i18n.sr.home_url -%}
+{%- endif -%}
 <div class="site-header">
-  <a href="{{ '/' | relative_url }}"><img class="logo" src="{{ '/assets/img/logo-color.png' | relative_url }}" alt="Meditato"></a>
+  <a href="{{ h_t.home_url | relative_url }}"><img class="logo" src="{{ '/assets/img/logo-color.png' | relative_url }}" alt="Meditato"></a>
   <div class="site-nav">
-    <a href="{{ '/' | relative_url }}">Home</a>
-    <a href="{{ '/articles/' | relative_url }}">Articles</a>
-    <a href="{{ '/about/' | relative_url }}">About</a>
-    <a href="{{ '/share/' | relative_url }}">Share a Story</a>
-    <a href="{{ '/contact/' | relative_url }}">Contact</a>
+    <a href="{{ h_t.home_url | relative_url }}">{{ h_t.home }}</a>
+    <a href="{{ h_t.articles_url | relative_url }}">{{ h_t.articles }}</a>
+    <a href="{{ h_t.about_url | relative_url }}">{{ h_t.about }}</a>
+    <a href="{{ h_t.share_url | relative_url }}">{{ h_t.share }}</a>
+    <a href="{{ h_t.contact_url | relative_url }}">{{ h_t.contact }}</a>
   </div>
   <div class="header-right">
-    {% if page.language == "sr" %}
-    <div class="lang-toggle">{% if page.lang_alt_url %}<a href="{{ page.lang_alt_url | relative_url }}">EN</a>{% else %}EN{% endif %}&nbsp;<span class="sep">|</span>&nbsp;SR</div>
-    {% else %}
-    <div class="lang-toggle">EN&nbsp;<span class="sep">|</span>&nbsp;{% if page.lang_alt_url %}<a href="{{ page.lang_alt_url | relative_url }}">SR</a>{% else %}<a href="#">SR</a>{% endif %}</div>
-    {% endif %}
+    <div class="lang-toggle">
+      {%- if h_lang == 'sr' -%}
+      <a href="{{ h_alt | relative_url }}" hreflang="en">EN</a>&nbsp;<span class="sep">|</span>&nbsp;<span class="current" aria-current="true">SR</span>
+      {%- else -%}
+      <span class="current" aria-current="true">EN</span>&nbsp;<span class="sep">|</span>&nbsp;<a href="{{ h_alt | relative_url }}" hreflang="sr">SR</a>
+      {%- endif -%}
+    </div>
   </div>
 </div>

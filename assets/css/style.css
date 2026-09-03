@@ -45,9 +45,17 @@ img { max-width: 100%; }
 .site-header .logo { height: 44px; width: auto; }
 .site-nav { display: flex; align-items: center; gap: 36px; font-size: 15px; font-weight: 500; color: var(--text); }
 .header-right { display: flex; align-items: center; gap: 18px; }
-.lang-toggle { font-size: 13px; font-weight: 600; letter-spacing: 0.03em; color: var(--muted-2); }
-.lang-toggle .sep { color: var(--border); }
-.lang-toggle a { color: var(--muted-2); }
+.lang-toggle { font-size: 13px; font-weight: 600; letter-spacing: 0.03em; color: var(--muted); white-space: nowrap; }
+.lang-toggle .sep { color: var(--dashed); }
+.lang-toggle .current { color: var(--muted); }
+.lang-toggle a { color: var(--brand); }
+.lang-toggle a:hover { color: var(--accent); }
+/* Serbian nav labels are longer than the English ones; without this the fixed
+   84px single-row header overflows horizontally on narrow screens. */
+@media (max-width: 900px) {
+  .site-header { height: auto; flex-wrap: wrap; gap: 12px 20px; padding: 16px 24px; }
+  .site-nav { gap: 20px; flex-wrap: wrap; font-size: 14px; }
+}
 .support-btn {
   padding: 9px 18px;
   border: 1.5px solid var(--accent);

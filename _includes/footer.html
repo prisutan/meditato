@@ -1,22 +1,24 @@
+{%- assign f_lang = page.language | default: 'en' -%}
+{%- assign f_t = site.data.i18n[f_lang] -%}
 <div class="site-footer">
   <img src="{{ '/assets/img/logo-white.png' | relative_url }}" alt="Meditato">
   <div class="footer-col">
-    <div class="heading">Explore</div>
-    <a href="{{ '/' | relative_url }}">Home</a>
-    <a href="{{ '/articles/' | relative_url }}">Articles</a>
-    <a href="{{ '/about/' | relative_url }}">About</a>
+    <div class="heading">{{ f_t.explore }}</div>
+    <a href="{{ f_t.home_url | relative_url }}">{{ f_t.home }}</a>
+    <a href="{{ f_t.articles_url | relative_url }}">{{ f_t.articles }}</a>
+    <a href="{{ f_t.about_url | relative_url }}">{{ f_t.about }}</a>
   </div>
   <div class="footer-col">
-    <div class="heading">Categories</div>
-    <a href="{{ '/breath/' | relative_url }}">Breath</a>
-    <a href="{{ '/traditions/' | relative_url }}">Traditions</a>
-    <a href="{{ '/sleep/' | relative_url }}">Sleep</a>
+    <div class="heading">{{ f_t.categories_heading }}</div>
+    <a href="{{ f_t.categories.Breath.url | relative_url }}">{{ f_t.categories.Breath.label }}</a>
+    <a href="{{ f_t.categories.Traditions.url | relative_url }}">{{ f_t.categories.Traditions.label }}</a>
+    <a href="{{ f_t.categories.Sleep.url | relative_url }}">{{ f_t.categories.Sleep.label }}</a>
   </div>
   <div class="footer-col align-right">
     <span>&copy; {{ 'now' | date: '%Y' }} Meditato</span>
     <span>meditato.rs</span>
   </div>
   <div class="footer-col align-right">
-    <div class="support-btn">Support us</div>
+    <div class="support-btn">{{ f_t.support_us }}</div>
   </div>
 </div>
