@@ -13,7 +13,7 @@ layout: default
 
     {% if page.image %}
     <figure class="article-hero">
-      <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title }}">
+      <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title }}"{% if page.image_width %} width="{{ page.image_width }}"{% endif %}{% if page.image_height %} height="{{ page.image_height }}"{% endif %}>
       {% if page.image_credit %}<figcaption>{{ page.image_credit }}</figcaption>{% endif %}
     </figure>
     {% endif %}
@@ -30,7 +30,13 @@ layout: default
       <div class="sources-list">
         <ul>
           {% for source in page.sources %}
+          {% if source.url %}
+          <li><a href="{{ source.url }}" target="_blank" rel="noopener nofollow">{{ source.citation }}</a></li>
+          {% elsif source.citation %}
+          <li>{{ source.citation }}</li>
+          {% else %}
           <li>{{ source }}</li>
+          {% endif %}
           {% endfor %}
         </ul>
       </div>
