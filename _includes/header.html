@@ -7,6 +7,10 @@
     <a href="{{ '/contact/' | relative_url }}">Contact</a>
   </div>
   <div class="header-right">
-    <div class="lang-toggle">EN&nbsp;<span class="sep">|</span>&nbsp;<a href="#">SR</a></div>
+    {% if page.language == "sr" %}
+    <div class="lang-toggle">{% if page.lang_alt_url %}<a href="{{ page.lang_alt_url | relative_url }}">EN</a>{% else %}EN{% endif %}&nbsp;<span class="sep">|</span>&nbsp;SR</div>
+    {% else %}
+    <div class="lang-toggle">EN&nbsp;<span class="sep">|</span>&nbsp;{% if page.lang_alt_url %}<a href="{{ page.lang_alt_url | relative_url }}">SR</a>{% else %}<a href="#">SR</a>{% endif %}</div>
+    {% endif %}
   </div>
 </div>
