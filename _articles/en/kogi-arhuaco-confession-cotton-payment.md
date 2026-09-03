@@ -41,7 +41,7 @@ A person confessing holds bits of raw cotton "held between two fingers" and dire
 Deciding exactly what should be paid, where, and to which spiritual authority is itself a formal process. Mamas perform water divination, dropping small stone beads into a bowl and reading the resulting patterns as answers from Aluna about which payment a given problem requires. Confessions collected from a village during a single *nebshizha* — as with Shibulata's, above — are converted through that reading into a coordinated set of payments meant to call rain, protect crops, or settle a dispute.
 
 <figure>
-  <img src="/assets/img/kogi-confession/kogi-man-ciudad-perdida.jpg" alt="A Kogi man in traditional dress in the Sierra Nevada de Santa Marta region" width="1200" height="802" loading="lazy">
+  <img src="/assets/img/kogi-confession/kogi-man-ciudad-perdida.jpg" alt="A Kogi man in traditional dress in the Sierra Nevada de Santa Marta region" width="802" height="1200" loading="lazy">
   <figcaption>A Kogi man in traditional dress at Ciudad Perdida, in the Sierra Nevada de Santa Marta. Uhkabu, CC BY-SA 3.0, via Wikimedia Commons.</figcaption>
 </figure>
 
