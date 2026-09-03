@@ -1,0 +1,15 @@
+---
+layout: default
+---
+{% assign matched = site.articles | where: "category", page.category_filter | sort: 'date' | reverse %}
+
+<div class="section-head">
+  <h2>{{ page.title }}</h2>
+  <div class="note">{{ matched | size }} article{% unless matched.size == 1 %}s{% endunless %}</div>
+</div>
+
+<div class="article-grid">
+  {% for article in matched %}
+  {% include article-card.html article=article %}
+  {% endfor %}
+</div>

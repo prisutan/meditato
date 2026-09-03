@@ -6,7 +6,7 @@ layout: default
 {% if read_min < 1 %}{% assign read_min = 1 %}{% endif %}
 <div class="article-wrap">
   <div class="article-inner">
-    <div class="breadcrumb"><a href="{{ '/' | relative_url }}">Home</a> / <a href="{{ '/articles/' | relative_url }}">Articles</a> / <span class="current">{{ page.category }}</span></div>
+    <div class="breadcrumb"><a href="{{ '/' | relative_url }}">Home</a> / <a href="{{ '/articles/' | relative_url }}">Articles</a> / <a class="current" href="{{ '/' | append: page.category | downcase | append: '/' | relative_url }}">{{ page.category }}</a></div>
     <div class="article-cat">{{ page.category }}</div>
     <h1 class="serif">{{ page.title }}</h1>
     <div class="article-meta">{{ page.date | date: "%d %B %Y" }} &nbsp;&middot;&nbsp; {{ read_min }} min read &nbsp;&middot;&nbsp; Sourced beyond the usual wellness sites</div>
@@ -42,5 +42,37 @@ layout: default
       </div>
     </div>
     {% endif %}
+
+    {% assign related = site.articles | where: "category", page.category | where_exp: "a", "a.url != page.url" | sort: 'date' | reverse %}
+    {% if related.size > 0 %}
+    <div class="related-block">
+      <div class="sources-label">Related</div>
+      <div class="related-grid">
+        {% for article in related limit: 3 %}
+        {% include article-card.html article=article %}
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
   </div>
 </div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": {{ page.title | jsonify }},
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "dateModified": "{{ page.date | date_to_xmlschema }}",
+  "author": { "@type": "Organization", "name": "Meditato" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Meditato",
+    "logo": { "@type": "ImageObject", "url": "{{ '/assets/img/logo-color.png' | absolute_url }}" }
+  },
+  {% if page.image %}"image": "{{ page.image | absolute_url }}",{% endif %}
+  "mainEntityOfPage": "{{ page.url | absolute_url }}",
+  "articleSection": {{ page.category | jsonify }},
+  "inLanguage": "{{ page.language | default: 'en' }}"
+}
+</script>

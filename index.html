@@ -9,7 +9,7 @@ title: Meditation, explained calmly.
   <div class="hero-sub">New research, traditions and techniques from around the world — reviewed and added every week.</div>
   <div class="pill-row">
     {% for cat in site.categories_nav %}
-    <div class="pill">{{ cat }}</div>
+    <a class="pill" href="{{ '/' | append: cat | downcase | append: '/' | relative_url }}">{{ cat }}</a>
     {% endfor %}
   </div>
 </div>

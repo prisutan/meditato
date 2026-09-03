@@ -70,6 +70,7 @@ img { max-width: 100%; }
 .hero-sub { font-size: 17px; color: var(--muted); max-width: 560px; line-height: 1.6; }
 .pill-row { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-top: 6px; }
 .pill {
+  display: inline-block;
   padding: 8px 20px;
   background: var(--card);
   color: var(--brand);
@@ -77,6 +78,7 @@ img { max-width: 100%; }
   font-size: 14px;
   font-weight: 500;
 }
+.pill:hover { background: var(--accent); color: #fff; }
 
 /* Ad banner */
 .ad-banner-wrap { display: flex; justify-content: center; padding: 8px 56px 40px; }
@@ -183,6 +185,10 @@ img { max-width: 100%; }
 .sources-label { font-size: 12px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
 .sources-list { font-size: 13px; color: var(--muted); line-height: 1.6; }
 .sources-list ul { margin: 0; padding-left: 18px; }
+
+.related-block { margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--border); }
+.related-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin-top: 14px; }
+@media (max-width: 640px) { .related-grid { grid-template-columns: 1fr; } }
 
 /* Static pages */
 .static-page { max-width: 700px; margin: 0 auto; padding: 56px; }
