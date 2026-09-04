@@ -3,17 +3,21 @@ layout: default
 ---
 {% assign lang = page.language | default: 'en' %}
 {% assign t = site.data.i18n[lang] %}
-{% assign cat = t.categories[page.category] %}
+{% comment %}category may be a single string or an array (an article can belong to more than one); normalize to an array and use the first as the "primary" category for the breadcrumb/URL.{% endcomment %}
+{% if page.category.first %}{% assign cat_array = page.category %}{% else %}{% assign cat_array = page.category | split: "," %}{% endif %}
+{% assign primary_cat = cat_array | first %}
+{% assign cat = t.categories[primary_cat] %}
 {% comment %}Fallback if a new category is added to an article before _data/i18n.yml.{% endcomment %}
-{% assign cat_label = cat.label | default: page.category %}
-{% if cat.url %}{% assign cat_url = cat.url %}{% else %}{% assign cat_url = page.category | downcase | prepend: '/' | append: '/' %}{% endif %}
+{% assign cat_label = cat.label | default: primary_cat %}
+{% if cat.url %}{% assign cat_url = cat.url %}{% else %}{% assign cat_url = primary_cat | downcase | prepend: '/' | append: '/' %}{% endif %}
+{% capture cat_label_display %}{% for c in cat_array %}{{ t.categories[c].label | default: c }}{% unless forloop.last %} · {% endunless %}{% endfor %}{% endcapture %}
 {% assign words = page.content | number_of_words %}
 {% assign read_min = words | divided_by: 200 %}
 {% if read_min < 1 %}{% assign read_min = 1 %}{% endif %}
 <div class="article-wrap">
   <div class="article-inner">
     <div class="breadcrumb"><a href="{{ t.home_url | relative_url }}">{{ t.home }}</a> / <a href="{{ t.articles_url | relative_url }}">{{ t.articles }}</a> / <a class="current" href="{{ cat_url | relative_url }}">{{ cat_label }}</a></div>
-    <div class="article-cat">{{ cat_label }}</div>
+    <div class="article-cat">{{ cat_label_display }}</div>
     <h1 class="serif">{{ page.title }}</h1>
     <div class="article-meta">{% include fmt-date.html date=page.date t=t %} &nbsp;&middot;&nbsp; {{ read_min }} {{ t.min_read }} &nbsp;&middot;&nbsp; {{ t.sourced_note }}</div>
 
@@ -49,7 +53,7 @@ layout: default
     </div>
     {% endif %}
 
-    {% assign related = site.articles | where: "language", lang | where: "category", page.category | where_exp: "a", "a.url != page.url" | sort: 'date' | reverse %}
+    {% assign related = site.articles | where: "language", lang | where_exp: "a", "a.url != page.url" | where_exp: "a", "a.category == primary_cat or a.category contains primary_cat" | sort: 'date' | reverse %}
     {% if related.size > 0 %}
     <div class="related-block">
       <div class="sources-label">{{ t.related }}</div>

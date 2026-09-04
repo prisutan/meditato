@@ -1,14 +1,17 @@
 {%- comment -%}
 Params: article (required), t (i18n hash; falls back to the page's language),
 is_new (bool). Category label is looked up by the article's English category
-key, so cards render Serbian labels on Serbian listings.
+key(s), so cards render Serbian labels on Serbian listings. `article.category`
+may be a single string or an array (an article can belong to more than one
+category) — normalized to an array below either way.
 {%- endcomment -%}
 {% assign card_t = include.t | default: site.data.i18n[page.language] | default: site.data.i18n.en %}
 {% assign article = include.article %}
 {% assign words = article.content | number_of_words %}
 {% assign read_min = words | divided_by: 200 %}
 {% if read_min < 1 %}{% assign read_min = 1 %}{% endif %}
-{% assign card_cat = card_t.categories[article.category] %}
+{% if article.category.first %}{% assign cat_array = article.category %}{% else %}{% assign cat_array = article.category | split: "," %}{% endif %}
+{% capture card_cat_display %}{% for c in cat_array %}{{ card_t.categories[c].label | default: c }}{% unless forloop.last %} · {% endunless %}{% endfor %}{% endcapture %}
 <a class="article-card" href="{{ article.url | relative_url }}">
   <div class="thumb{% if article.image %} has-photo{% endif %}">
     {% if article.image %}
@@ -18,7 +21,7 @@ key, so cards render Serbian labels on Serbian listings.
     {% endif %}
     {% if include.is_new %}<div class="badge-new">{{ card_t.badge_new }}</div>{% endif %}
   </div>
-  <div class="cat">{{ card_cat.label | default: article.category }}</div>
+  <div class="cat">{{ card_cat_display }}</div>
   <div class="title serif">{{ article.title }}</div>
   <div class="meta">{% include fmt-date.html date=article.date t=card_t short=true %} &middot; {{ read_min }} {{ card_t.min_read }}</div>
   <div class="excerpt">{{ article.excerpt | strip_html | truncate: 130 }}</div>

@@ -91,6 +91,9 @@ en:
     Beginners:
       label: "Beginners"
       url: "/beginners/"
+    Techniques:
+      label: "Techniques"
+      url: "/techniques/"
 
 sr:
   code: "sr"
@@ -169,3 +172,6 @@ sr:
     Beginners:
       label: "Za početnike"
       url: "/sr/pocetnici/"
+    Techniques:
+      label: "Tehnike"
+      url: "/sr/tehnike/"
