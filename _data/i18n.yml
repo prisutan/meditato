@@ -10,7 +10,7 @@
 en:
   code: "en"
   locale: "en_US"
-  site_description: "New research, traditions and techniques from around the world — reviewed and added every week."
+  site_description: "New research, traditions and techniques from around the world."
   # navigation / URLs
   home_url: "/"
   articles_url: "/articles/"
@@ -97,7 +97,7 @@ en:
 sr:
   code: "sr"
   locale: "sr_RS"
-  site_description: "Nova istraživanja, tradicije i tehnike iz celog sveta — pregledano i dopunjeno svake nedelje."
+  site_description: "Nova istraživanja, tradicije i tehnike iz celog sveta."
   home_url: "/sr/"
   articles_url: "/sr/clanci/"
   about_url: "/sr/o-nama/"
