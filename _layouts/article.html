@@ -53,7 +53,7 @@ layout: default
     </div>
     {% endif %}
 
-    {% assign related = site.articles | where: "language", lang | where_exp: "a", "a.url != page.url" | where_exp: "a", "a.category == primary_cat or a.category contains primary_cat" | sort: 'date' | reverse %}
+    {% assign related = site.articles | where: "language", lang | where_exp: "a", "a.url != page.url" | where_exp: "a", "a.category contains primary_cat" | sort: 'date' | reverse %}
     {% if related.size > 0 %}
     <div class="related-block">
       <div class="sources-label">{{ t.related }}</div>
