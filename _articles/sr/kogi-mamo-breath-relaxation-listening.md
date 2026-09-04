@@ -2,7 +2,7 @@
 title: "Iznenadni znaci iznutra: disciplina daha, opuštanja i slušanja kod Kogi máma"
 category: Traditions
 region: Kolumbija (Sierra Nevada de Santa Marta)
-date: 2026-09-03
+date: 2026-09-03 10:00:00 +0000
 language: sr
 status: draft
 lang_alt_url: /articles/en/kogi-mamo-breath-relaxation-listening/

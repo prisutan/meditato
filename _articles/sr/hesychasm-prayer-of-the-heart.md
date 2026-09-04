@@ -2,7 +2,7 @@
 title: "Molitva srca: kako su vizantijski monasi uskladili reči sa dahom na Svetoj Gori"
 category: Traditions
 region: Grčka / Sveta Gora (Atos)
-date: 2026-09-03
+date: 2026-09-03 14:00:00 +0000
 language: sr
 status: draft
 lang_alt_url: /articles/en/hesychasm-prayer-of-the-heart/

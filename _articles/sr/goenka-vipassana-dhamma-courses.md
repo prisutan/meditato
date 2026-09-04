@@ -2,7 +2,7 @@
 title: "Osećaj po osećaj: Goenkina metoda vipassane i mreža Dhamma kurseva"
 category: [Techniques, Traditions]
 region: Indija / Mjanmar (Burma)
-date: 2026-09-03
+date: 2026-09-03 18:00:00 +0000
 language: sr
 status: draft
 lang_alt_url: /articles/en/goenka-vipassana-dhamma-courses/

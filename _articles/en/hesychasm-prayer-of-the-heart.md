@@ -2,7 +2,7 @@
 title: "Prayer of the Heart: How Byzantine Monks Set Words to Breath on Mount Athos"
 category: Traditions
 region: Greece / Mount Athos
-date: 2026-09-03
+date: 2026-09-03 14:00:00 +0000
 language: en
 status: draft
 lang_alt_url: /articles/sr/hesychasm-prayer-of-the-heart/

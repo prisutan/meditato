@@ -2,7 +2,7 @@
 title: "Sensation by Sensation: The Goenka Method of Vipassana and the Dhamma Course Network"
 category: [Techniques, Traditions]
 region: India / Myanmar (Burma)
-date: 2026-09-03
+date: 2026-09-03 18:00:00 +0000
 language: en
 status: draft
 lang_alt_url: /articles/sr/goenka-vipassana-dhamma-courses/

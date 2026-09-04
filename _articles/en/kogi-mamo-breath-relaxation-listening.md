@@ -2,7 +2,7 @@
 title: "Sudden Signs from Within: The Kogi Máma's Breath, Relaxation, and Listening Discipline"
 category: Traditions
 region: Colombia (Sierra Nevada de Santa Marta)
-date: 2026-09-03
+date: 2026-09-03 10:00:00 +0000
 language: en
 status: draft
 lang_alt_url: /articles/sr/kogi-mamo-breath-relaxation-listening/
