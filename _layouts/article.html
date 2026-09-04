@@ -19,7 +19,7 @@ layout: default
     <div class="breadcrumb"><a href="{{ t.home_url | relative_url }}">{{ t.home }}</a> / <a href="{{ t.articles_url | relative_url }}">{{ t.articles }}</a> / <a class="current" href="{{ cat_url | relative_url }}">{{ cat_label }}</a></div>
     <div class="article-cat">{{ cat_label_display }}</div>
     <h1 class="serif">{{ page.title }}</h1>
-    <div class="article-meta">{% include fmt-date.html date=page.date t=t %} &nbsp;&middot;&nbsp; {{ read_min }} {{ t.min_read }} &nbsp;&middot;&nbsp; {{ t.sourced_note }}</div>
+    <div class="article-meta">{% include fmt-date.html date=page.date t=t %} &nbsp;&middot;&nbsp; {{ read_min }} {{ t.min_read }}</div>
 
     {% if page.image %}
     <figure class="article-hero">
