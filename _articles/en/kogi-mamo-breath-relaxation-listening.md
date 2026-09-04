@@ -5,6 +5,7 @@ region: Colombia (Sierra Nevada de Santa Marta)
 date: 2026-09-03
 language: en
 status: draft
+lang_alt_url: /articles/sr/kogi-mamo-breath-relaxation-listening/
 image: /assets/img/kogi-mamo-discipline/kogi-mamo-portrait.jpg
 image_alt: A Kogi man in traditional cotton clothing beside moss-covered rocks near Ciudad Perdida, Sierra Nevada de Santa Marta
 image_credit: "A Kogi man photographed at Ciudad Perdida, in the Sierra Nevada de Santa Marta. Dwayne Reilander, CC BY-SA 4.0, via Wikimedia Commons"
