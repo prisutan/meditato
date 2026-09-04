@@ -93,6 +93,9 @@ en:
     Techniques:
       label: "Techniques"
       url: "/techniques/"
+    Science:
+      label: "Science"
+      url: "/science/"
 
 sr:
   code: "sr"
@@ -173,3 +176,6 @@ sr:
     Techniques:
       label: "Tehnike"
       url: "/sr/tehnike/"
+    Science:
+      label: "Nauka"
+      url: "/sr/nauka/"
