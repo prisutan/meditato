@@ -2,7 +2,7 @@
 title: "Metoda Vima Hofa: praksa, tvrdnje i šta su pokazala nezavisna klinička ispitivanja"
 category: [Breath, Science]
 region: Holandija
-date: 2026-09-10 15:00:00 +0000
+date: 2026-09-10 12:00:00 +0000
 language: sr
 status: draft
 lang_alt_url: /articles/en/wim-hof-method-breathing-cold-exposure/
