@@ -31,7 +31,7 @@ Reichel-Dolmatoffov opis samo konstatuje da je obuka, u ovom drugom ciklusu, pre
 
 ## Odakle su dolazila viđenja
 
-Reichel-Dolmatoff prati poreklo ovih izmenjenih stanja do više od jednog uzroka. Halucinatorna stanja uopšte, beleži on, "mogu... biti izazvana endogeno senzornim uskraćivanjima i drugim praksama" — a među njima, po sopstvenom objašnjenju máma koje su mu dale, i to da "kontrolisan niz ili sled senzornih uskraćivanja na kraju dovodi do izmenjenih stanja svesti". Kogi su takođe koristili halucinogenu gljivu, *Meteniusa edulis*, rezervisanu za máme, da bi direktno izazvali stanja viđenja. Trans tokom stvarnog obavljanja rituala, dodaje on, verovatnije je nastajao drugom kombinacijom — unetim drogama zajedno sa napornim fizičkim naporom. Opis ovo ne svodi na jedan mehanizam; opisuje nekoliko puteva koje su sami Kogi razlikovali, korišćenih u različitim fazama i za različite svrhe.
+Reichel-Dolmatoff prati poreklo ovih izmenjenih stanja do više od jednog uzroka. Halucinatorna stanja uopšte, beleži on, "mogu... biti izazvana endogeno senzornim uskraćivanjima i drugim praksama" — a među njima, po sopstvenom objašnjenju máma koje su mu dale, i to da "kontrolisan niz ili sled senzornih uskraćivanja na kraju dovodi do izmenjenih stanja svesti". Kogi su takođe koristili halucinogenu gljivu, *Meteniusa edulis*, rezervisanu za máme, da bi direktno izazvali stanja viđenja. Trans tokom stvarnog obavljanja rituala, dodaje on, verovatnije je nastajao drugom kombinacijom — unetim drogama zajedno sa napornim fizičkim naporom. Opis ovo ne svodi na jedan mehanizam, već opisuje nekoliko puteva koje su sami Kogi razlikovali, korišćenih u različitim fazama i za različite svrhe.
 
 ## Primljena uputstva, odluke donete u samoći
 
