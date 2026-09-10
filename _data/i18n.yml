@@ -128,7 +128,7 @@ sr:
   explore: "Istraži"
   categories_heading: "Kategorije"
   support_us: "Podržite nas"
-  disclaimer: "Meditato je nezavisan istraživački projekat. Članci se sastavljaju na osnovu javno dostupnih izvora; iako težimo tačnosti, ne garantujemo potpunost ili ispravnost i ne snosimo odgovornost za način na koji se ove informacije koriste."
+  disclaimer: "Meditato je nezavisan istraživački projekat. Članci se sastavljaju na osnovu javno dostupnih izvora. Iako težimo tačnosti, ne garantujemo potpunost ili ispravnost i ne snosimo odgovornost za način na koji se ove informacije koriste."
   date_style: "sr"
   months:
     - "januara"
