@@ -1,6 +1,6 @@
 ---
 title: "Osećaj po osećaj: Goenkina metoda vipassane i mreža Dhamma kurseva"
-category: [Techniques, Traditions]
+category: [Techniques, Breath, Beginners]
 region: Indija / Mjanmar (Burma)
 date: 2026-09-03 18:00:00 +0000
 language: sr

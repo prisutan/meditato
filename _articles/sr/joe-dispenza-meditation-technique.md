@@ -1,6 +1,6 @@
 ---
 title: "Džo Dispenza: metoda meditacije, čovek, i podaci koje je izgradio oko nje"
-category: [Techniques, Science]
+category: Science
 region: Sjedinjene Američke Države
 date: 2026-09-08 12:00:00 +0000
 language: sr

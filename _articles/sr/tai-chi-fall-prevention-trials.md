@@ -1,6 +1,6 @@
 ---
 title: "Talasanje ruku kao oblaci: šta su klinička ispitivanja tai čija zaista pokazala o prevenciji padova"
-category: [Techniques, Science]
+category: [Techniques, Science, Traditions]
 region: "Sjedinjene Američke Države (Atlanta, Džordžija / Portland, Oregon)"
 date: 2026-09-09 12:00:00 +0000
 language: sr

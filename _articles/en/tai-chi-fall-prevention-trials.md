@@ -1,6 +1,6 @@
 ---
 title: "Wave Hands Like Clouds: What the Tai Chi Fall-Prevention Trials Actually Found"
-category: [Techniques, Science]
+category: [Techniques, Science, Traditions]
 region: "United States (Atlanta, Georgia / Portland, Oregon)"
 date: 2026-09-09 12:00:00 +0000
 language: en

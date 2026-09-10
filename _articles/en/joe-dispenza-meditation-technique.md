@@ -1,6 +1,6 @@
 ---
 title: "Joe Dispenza: The Meditation Method, the Man, and the Data He Built Around It"
-category: [Techniques, Science]
+category: Science
 region: United States
 date: 2026-09-08 12:00:00 +0000
 language: en

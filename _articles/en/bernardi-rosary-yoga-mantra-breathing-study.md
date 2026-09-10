@@ -1,6 +1,6 @@
 ---
 title: "Six Breaths a Minute: What a Rosary and a Yoga Mantra Do to the Heart"
-category: [Techniques, Science]
+category: [Techniques, Breath]
 region: Italy
 date: 2026-09-09 12:00:00 +0000
 language: en

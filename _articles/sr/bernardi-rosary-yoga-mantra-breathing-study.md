@@ -1,6 +1,6 @@
 ---
 title: "Šest udaha u minuti: šta krunica i jogijska mantra rade srcu"
-category: [Techniques, Science]
+category: [Techniques, Breath]
 region: Italija
 date: 2026-09-09 12:00:00 +0000
 language: sr
