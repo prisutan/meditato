@@ -60,3 +60,9 @@ Autogeni trening je od tada bio predmet decenija kliničkih ispitivanja na dugoj
 ## I dalje se predaje, i dalje svakodnevno
 
 Autogeni trening je i dalje u kliničkoj upotrebi, a praktikuje se i daleko izvan klinike — u obrazovanju, industriji, sportu. Predaje se pojedinačno ili u grupi, a vežbe se uče postepeno, ne preuzimaju se sa jednog uputstva. Sesija traje samo oko petnaest do dvadeset dva minuta i namenjena je za svakodnevno vežbanje. Niz ostaje onaj koji je Šulc postavio: težina, toplota, otkucaji srca, dah, toplota trbuha, hladnoća čela.
+
+## Pogledajte: kratak pregled
+
+<div class="video-embed">
+  <iframe src="https://www.youtube-nocookie.com/embed/lcX1zPJyzo8" title="What is Autogenic Training | Explained in 2 min" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>

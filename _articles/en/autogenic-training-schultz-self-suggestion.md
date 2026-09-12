@@ -60,3 +60,9 @@ Autogenic training has since been the subject of decades of clinical trials acro
 ## Still taught, still daily
 
 Autogenic training is still in clinical use, and still practised well outside the clinic — in education, industry, sport. It is taught individually or in a group, the exercises learned progressively rather than picked up from a single instruction sheet; a session takes only about fifteen to twenty-two minutes, and is meant to be done daily. The sequence remains the one Schultz set out: heaviness, warmth, heartbeat, breath, abdominal warmth, forehead coolness.
+
+## Watch: a short overview
+
+<div class="video-embed">
+  <iframe src="https://www.youtube-nocookie.com/embed/lcX1zPJyzo8" title="What is Autogenic Training | Explained in 2 min" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
