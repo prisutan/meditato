@@ -5,7 +5,6 @@ region: India
 date: 2026-09-12 07:00:00 +0000
 language: en
 status: draft
-published: false
 lang_alt_url: /articles/sr/yoga-nidra/
 image: /assets/img/yoga-nidra/yoga-nidra-teaching-camp.jpg
 image_alt: "Garlands exchanged under a tent at a yoga nidra for insomnia camp run by Tapasvi Shree Chaitanya Guruji, whose portrait hangs on the banner behind, India"

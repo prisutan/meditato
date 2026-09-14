@@ -5,7 +5,6 @@ region: Nemačka
 date: 2026-09-12 06:00:00 +0000
 language: sr
 status: draft
-published: false
 lang_alt_url: /articles/en/autogenic-training-schultz-self-suggestion/
 image: /assets/img/autogenic-training/das-autogene-training-1932-cover-crop.jpg
 image_alt: "Detalj sa naslovom, imenom autora i podnaslovom sa korica knjige Das Autogene Training Johanesa Hajnriha Šulca, Lajpcig, 1932, isečen iz pune uspravne korice u položenu traku"

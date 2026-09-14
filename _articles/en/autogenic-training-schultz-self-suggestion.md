@@ -5,7 +5,6 @@ region: Germany
 date: 2026-09-12 06:00:00 +0000
 language: en
 status: draft
-published: false
 lang_alt_url: /articles/sr/autogenic-training-schultz-self-suggestion/
 image: /assets/img/autogenic-training/das-autogene-training-1932-cover-crop.jpg
 image_alt: "Title, author and subtitle detail from the cover of Das Autogene Training by Johannes Heinrich Schultz, Leipzig, 1932, cropped from the full portrait cover to a landscape band"

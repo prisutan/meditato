@@ -5,7 +5,6 @@ region: Indija
 date: 2026-09-12 07:00:00 +0000
 language: sr
 status: draft
-published: false
 lang_alt_url: /articles/en/yoga-nidra/
 image: /assets/img/yoga-nidra/yoga-nidra-teaching-camp.jpg
 image_alt: "Razmena venaca pod šatrom na kampu joga nidre za nesanicu koji vodi Tapasvi Šri Čaitanja Guruđi, čiji portret stoji na transparentu u pozadini, Indija"
