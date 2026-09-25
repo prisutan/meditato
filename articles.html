@@ -16,6 +16,7 @@ lang_alt_url: /sr/clanci/
 
 <div class="article-grid">
   {% for article in sorted %}
+  {% if forloop.index == 13 %}<span id="more" class="anchor-offset"></span>{% endif %}
   {% include article-card.html article=article t=t %}
   {% endfor %}
 </div>
