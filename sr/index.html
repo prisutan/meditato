@@ -33,3 +33,7 @@ lang_alt_url: /
   {% include article-card.html article=article t=t is_new=forloop.first %}
   {% endfor %}
 </div>
+
+<div class="view-all-wrap">
+  <a class="view-all-link" href="{{ t.articles_url | relative_url }}">{{ t.all_articles }} &rarr;</a>
+</div>
